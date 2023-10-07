@@ -5,6 +5,8 @@
 [node name="Main" type="Node"]
 
 [node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, -304)
+scale = Vector2(2, 2)
 metadata/_edit_group_ = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor"]
