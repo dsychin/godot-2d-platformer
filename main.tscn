@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://deni8wrjg0uwb"]
+
+[ext_resource type="PackedScene" uid="uid://cniqlnyny2sli" path="res://player.tscn" id="1_ujo0g"]
+
+[node name="Main" type="Node"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor"]
+polygon = PackedVector2Array(0, 232, 24, 232, 32, 256, 128, 256, 128, 280, 160, 280, 160, 256, 248, 256, 248, 240, 304, 240, 304, 240, 304, 256, 408, 256, 408, 328, 440, 328, 440, 256, 536, 256, 536, 232, 592, 200, 608, 104, 640, 96, 640, 360, 0, 360)
+
+[node name="Polygon2D" type="Polygon2D" parent="Floor/CollisionPolygon2D"]
+polygon = PackedVector2Array(0, 232, 24, 232, 32, 256, 128, 256, 128, 280, 160, 280, 160, 256, 248, 256, 248, 240, 304, 240, 304, 256, 408, 256, 408, 328, 440, 328, 440, 256, 536, 256, 536, 232, 592, 200, 608, 104, 640, 96, 640, 360, 0, 360)
+
+[node name="Player" parent="." instance=ExtResource("1_ujo0g")]
+position = Vector2(72, 168)
