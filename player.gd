@@ -1,11 +1,6 @@
 extends CharacterBody2D
 
-
-const SPEED = 180.0
-const JUMP_VELOCITY = -250.0
-const COYOTE_FRAMES = 6
-const ACCELERATION = 0.25
-const FRICTION = 0.1
+@export var movement_data : PlayerMovementData
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -18,7 +13,7 @@ var is_in_coyote = false
 
 func _ready():
 	animated_sprite.play("idle")
-	coyote_timer.wait_time = COYOTE_FRAMES / 60.0
+	coyote_timer.wait_time = movement_data.coyote_frames / 60.0
 
 func _physics_process(delta):
 	apply_gravity(delta)
@@ -40,13 +35,13 @@ func apply_coyote():
 
 func handle_movement(direction: float):
 	if direction:
-		velocity.x = lerp(velocity.x, direction * SPEED, ACCELERATION)
+		velocity.x = lerp(velocity.x, direction * movement_data.speed, movement_data.acceleration)
 	else:
-		velocity.x = lerp(velocity.x, 0.0, FRICTION)
+		velocity.x = lerp(velocity.x, 0.0, movement_data.friction)
 
 func handle_jump():
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or is_in_coyote):
-		velocity.y = JUMP_VELOCITY
+		velocity.y = movement_data.jump_velocity
 		is_in_coyote = false
 
 func apply_gravity(delta: float):
