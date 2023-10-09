@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://u05ho8tq67ap"]
+
+[ext_resource type="PackedScene" uid="uid://cniqlnyny2sli" path="res://src/player.tscn" id="1_38x1t"]
+
+[node name="PlatformEdge" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_38x1t")]
+position = Vector2(56, 38)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(32, 8)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 40, 32, 40, 32, 64, 0, 64)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 40, 32, 40, 32, 64, 0, 64)
