@@ -16,4 +16,4 @@ polygon = PackedVector2Array(0, 232, 24, 232, 32, 256, 128, 256, 128, 280, 160, 
 polygon = PackedVector2Array(0, 232, 24, 232, 32, 256, 128, 256, 128, 280, 160, 280, 160, 256, 248, 256, 248, 240, 304, 240, 304, 256, 408, 256, 408, 328, 440, 328, 440, 256, 536, 256, 536, 232, 592, 200, 608, 104, 640, 96, 640, 360, 0, 360)
 
 [node name="Player" parent="." instance=ExtResource("1_ujo0g")]
-position = Vector2(72, 168)
+position = Vector2(161, 198)
