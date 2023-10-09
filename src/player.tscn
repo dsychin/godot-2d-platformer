@@ -1,39 +1,39 @@
 [gd_scene load_steps=14 format=3 uid="uid://cniqlnyny2sli"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_diqd4"]
-[ext_resource type="Texture2D" uid="uid://ce5bhypaeovjd" path="res://player.png" id="2_3nii0"]
-[ext_resource type="Resource" uid="uid://brsorn5q1iesp" path="res://default_movement_data.tres" id="2_jh7x5"]
+[ext_resource type="Script" path="res://src/player.gd" id="1_rrve8"]
+[ext_resource type="Resource" uid="uid://brsorn5q1iesp" path="res://default_movement_data.tres" id="2_4qfkq"]
+[ext_resource type="Texture2D" uid="uid://ce5bhypaeovjd" path="res://assets/player.png" id="3_qqki1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p56iw"]
-atlas = ExtResource("2_3nii0")
+atlas = ExtResource("3_qqki1")
 region = Rect2(0, 0, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i7okl"]
-atlas = ExtResource("2_3nii0")
+atlas = ExtResource("3_qqki1")
 region = Rect2(144, 0, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ogbs4"]
-atlas = ExtResource("2_3nii0")
+atlas = ExtResource("3_qqki1")
 region = Rect2(24, 0, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lowlk"]
-atlas = ExtResource("2_3nii0")
+atlas = ExtResource("3_qqki1")
 region = Rect2(48, 0, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vlgen"]
-atlas = ExtResource("2_3nii0")
+atlas = ExtResource("3_qqki1")
 region = Rect2(72, 0, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_du1j5"]
-atlas = ExtResource("2_3nii0")
+atlas = ExtResource("3_qqki1")
 region = Rect2(96, 0, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f3xk7"]
-atlas = ExtResource("2_3nii0")
+atlas = ExtResource("3_qqki1")
 region = Rect2(120, 0, 24, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rxyl0"]
-atlas = ExtResource("2_3nii0")
+atlas = ExtResource("3_qqki1")
 region = Rect2(0, 0, 24, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r4fed"]
@@ -84,8 +84,8 @@ size = Vector2(8, 15)
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(-1, -10)
 floor_snap_length = 3.0
-script = ExtResource("1_diqd4")
-movement_data = ExtResource("2_jh7x5")
+script = ExtResource("1_rrve8")
+movement_data = ExtResource("2_4qfkq")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

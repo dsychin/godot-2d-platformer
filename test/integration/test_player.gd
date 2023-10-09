@@ -1,6 +1,6 @@
 extends GutTest
 
-var Scene: PackedScene = load("res://main.tscn")
+var Scene: PackedScene = load("res://src/main.tscn")
 var _scene: Node = null
 var _player: CharacterBody2D = null
 var _sender = InputSender.new(Input)
